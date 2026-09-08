@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string nombre;
+    double salario;
+    int meses;
+    double aguinaldo;
+
+    cout << "Ingrese nombre: ";
+    cin >> nombre;
+
+    cout << "Ingrese salario mensual: ";
+    cin >> salario;
+
+    cout << "Ingrese meses trabajados: ";
+    cin >> meses;
+
+    aguinaldo = salario * meses / 12;
+
+    cout << "Nombre: " << nombre << endl;
+    cout << "Aguinaldo: " << aguinaldo << endl;
+
+    return 0;
+}
