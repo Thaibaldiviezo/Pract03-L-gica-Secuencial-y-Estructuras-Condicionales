@@ -1,0 +1,59 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double a, b, c;
+    double x1, x2;
+    double discriminante;
+
+    cout << "Ingrese a: ";
+    cin >> a;
+
+    cout << "Ingrese b: ";
+    cin >> b;
+
+    cout << "Ingrese c: ";
+    cin >> c;
+
+    if(a == 0 && b == 0)
+    {
+        cout << "Ecuacion degenerada";
+    }
+
+    if(a == 0 && b != 0)
+    {
+        x1 = -c / b;
+
+        cout << "Solucion: " << x1;
+    }
+
+    if(a != 0)
+    {
+        discriminante = b * b - 4 * a * c;
+
+        if(discriminante > 0)
+        {
+            x1 = (-b + sqrt(discriminante)) / (2 * a);
+            x2 = (-b - sqrt(discriminante)) / (2 * a);
+
+            cout << "X1 = " << x1 << endl;
+            cout << "X2 = " << x2 << endl;
+        }
+
+        if(discriminante == 0)
+        {
+            x1 = -b / (2 * a);
+
+            cout << "Raiz doble = " << x1;
+        }
+
+        if(discriminante < 0)
+        {
+            cout << "Raices complejas";
+        }
+    }
+
+    return 0;
+}
