@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double capital;
+    double tasa;
+    int anios;
+
+    double monto;
+    double ganancia;
+
+    cout << "Ingrese capital inicial: ";
+    cin >> capital;
+
+    cout << "Ingrese tasa anual (%): ";
+    cin >> tasa;
+
+    cout << "Ingrese numero de anios: ";
+    cin >> anios;
+
+    monto = capital * pow((1 + tasa / 12 / 100), (anios * 12));
+
+    ganancia = monto - capital;
+
+    cout << "Monto acumulado: " << monto << endl;
+    cout << "Ganancia neta: " << ganancia << endl;
+
+    return 0;
+}
