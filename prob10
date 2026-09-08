@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int dia1, mes1;
+    int dia2, mes2;
+
+    int fecha1;
+    int fecha2;
+
+    int diferencia;
+
+    int meses;
+    int dias;
+
+    cout << "Ingrese dia y mes inicial: ";
+    cin >> dia1 >> mes1;
+
+    cout << "Ingrese dia y mes final: ";
+    cin >> dia2 >> mes2;
+
+    fecha1 = (mes1 * 30) + dia1;
+    fecha2 = (mes2 * 30) + dia2;
+
+    diferencia = fecha2 - fecha1;
+
+    meses = diferencia / 30;
+    dias = diferencia % 30;
+
+    cout << "Meses: " << meses << endl;
+    cout << "Dias: " << dias << endl;
+
+    return 0;
+}
