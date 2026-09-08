@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double celsius;
+    double fahrenheit;
+    double kelvin;
+    double rankine;
+
+    cout << "Ingrese temperatura en Celsius: ";
+    cin >> celsius;
+
+    fahrenheit = (celsius * 9 / 5) + 32;
+    kelvin = celsius + 273.15;
+    rankine = (celsius + 273.15) * 9 / 5;
+
+    cout << "Fahrenheit: " << fahrenheit << endl;
+    cout << "Kelvin: " << kelvin << endl;
+    cout << "Rankine: " << rankine << endl;
+
+    return 0;
+}
